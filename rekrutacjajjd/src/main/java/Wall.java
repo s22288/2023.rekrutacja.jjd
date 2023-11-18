@@ -1,24 +1,9 @@
 import java.util.List;
 import java.util.Optional;
 
-public class Wall implements Structure ,CompositeBlock{
-    private List<Block> blocks ;
 
-    @Override
-    public String getColor() {
-        return "";
-    }
-
-    @Override
-    public String getMaterial() {
-        return "";
-    }
-
-    @Override
-    public List<Block> getBlocks() {
-        return blocks;
-    }
-
+public class Wall  implements Structure,CompositeBlock{
+    private final List<Block> blocks ;
 
     public Wall(List<Block> blocks) {
         this.blocks = blocks;
@@ -42,5 +27,18 @@ public class Wall implements Structure ,CompositeBlock{
     }
 
 
+    @Override
+    public String getColor() {
+        return "default";
+    }
 
+    @Override
+    public String getMaterial() {
+        return "default";
+    }
+
+    @Override
+    public List<Block> getBlocks() {
+        return blocks;
+    }
 }
